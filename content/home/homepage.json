@@ -1,6 +1,13 @@
 {
-  "title": "Home",
+  "title": "Dosey-Doe",
   "content": "intro.md",
+  "logo": "../images/Logo.png",
+  "splashText": "DOSEY DOE",
+  "splash": {
+    "title": "DOSEY-DOE",
+    "text": "DOSEY-DOE",
+    "image": "../images/HomepagePhoto.png"
+  }, 
   "gallery": [{
     "title": "React Context",
     "copy": "For global styles.",

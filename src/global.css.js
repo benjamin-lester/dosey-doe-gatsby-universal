@@ -19,7 +19,7 @@ export default createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    //font: inherit;
     vertical-align: baseline;
   }
 
@@ -34,7 +34,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     line-height: 1;
     font-size: 1.6rem;
     color: #000;
@@ -81,7 +81,7 @@ export default createGlobalStyle`
     border-radius: 5px;
     color: ${accent};
     border: 1px solid #ddd;
-    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-family: Nunito,"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
   }
 
   video {

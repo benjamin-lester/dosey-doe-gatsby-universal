@@ -4,17 +4,23 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
 import Gallery from 'components/gallery';
+import Img from 'gatsby-image';
 import IOExample from 'components/io-example';
+import styled from 'styled-components';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
 
 const Index = ({ data }) => (
   <Layout>
     <Box>
-      <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+      <Img fluid={data.homeJson.splash.image.childImageSharp.fluid} alt={data.homeJson.splash.title} />
+      {/* <Img src={data.homeJson.splash.image} /> */}
+      <Title as="h3" size="large">
+        {data.homeJson.splash.text}
       </Title>
-      <Modal>
+      </Box>
+      
+      {/* {/* <Modal>
         <video
           src="https://i.imgur.com/gzFqNSW.mp4"
           playsInline
@@ -23,10 +29,9 @@ const Index = ({ data }) => (
           muted
         />
       </Modal>
-    </Box>
     <Gallery items={data.homeJson.gallery} />
     <div style={{ height: '50vh' }} />
-    <IOExample />
+    <IOExample /> */}
   </Layout>
 );
 
@@ -40,6 +45,25 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
+      splashText
+      splash {
+        text
+        title
+        image {
+          childImageSharp {
+            fluid(maxHeight: 500, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }    
+      logo {
+        childImageSharp {
+          fluid(maxHeight: 500, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      } 
       content {
         childMarkdownRemark {
           html

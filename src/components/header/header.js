@@ -5,6 +5,7 @@ import posed from 'react-pose';
 import { Container } from './header.css';
 import Title from 'components/title';
 import Nav from 'components/header/nav';
+import Logo from './logo/logo';
 
 // Example of a component-specific page transition
 const AnimatedContainer = posed.div({
@@ -22,11 +23,12 @@ const AnimatedContainer = posed.div({
   },
 });
 
-const Header = ({ title }) => (
+const Header = ({ title, logo }) => (
+  
   <AnimatedContainer>
     <Container>
       <Link to="/">
-        <Title as="h1">{title}</Title>
+        <Logo title={title} logo={logo} />
       </Link>
 
       <Nav />
@@ -36,6 +38,7 @@ const Header = ({ title }) => (
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
+  logo: PropTypes.object.isRequired,
 };
 
 export default Header;

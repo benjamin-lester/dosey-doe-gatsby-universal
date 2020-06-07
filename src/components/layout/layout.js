@@ -9,7 +9,7 @@ const Layout = ({ data, children }) => (
   <div>
     <GlobalStyle />
     <Head />
-    <Header title={data.site.siteMetadata.siteTitle} />
+    <Header title={data.site.siteMetadata.siteTitle} logo={data.homeJson.logo}  />
     {children}
   </div>
 );
@@ -19,7 +19,7 @@ Layout.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-const LayoutWithQuery = props => (
+const LayoutWithQuery = (props) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -28,9 +28,18 @@ const LayoutWithQuery = props => (
             siteTitle
           }
         }
+        homeJson {
+          logo {
+            childImageSharp {
+              fluid(maxHeight: 500, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
       }
     `}
-    render={data => <Layout data={data} {...props} />}
+    render={(data) => <Layout data={data} {...props} />}
   />
 );
 

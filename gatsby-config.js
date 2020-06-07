@@ -12,6 +12,17 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-eslint`,
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito`,
+            variants: [`400`, `700`]
+          }
+        ],
+      },
+    },    
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
