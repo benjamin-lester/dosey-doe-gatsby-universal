@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
 export const Text = styled.span`
-  display: inline-block;
   text-align: center;
+  display: block;
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':

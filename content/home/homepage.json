@@ -1,26 +1,10 @@
 {
   "title": "Dosey-Doe",
-  "content": "intro.md",
   "logo": "../images/Logo.jpg",
   "splashText": "DOSEY DOE",
   "splash": {
     "title": "DOSEY-DOE",
     "text": "DOSEY-DOE",
     "image": "../images/HomepagePhoto.png"
-  }, 
-  "gallery": [{
-    "title": "React Context",
-    "copy": "For global styles.",
-    "image": "../images/gallery/react-context.jpg"
-  },
-  {
-    "title": "Page Transitions",
-    "copy": "Component-based for easy usage.",
-    "image": "../images/gallery/page-transitions.jpg"
-  },
-  {
-    "title": "Intersection Observer",
-    "copy": "Including a polyfill for Safari.",
-    "image": "../images/gallery/intersection-observer.jpg"
-  }]
+  }
 }
