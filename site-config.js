@@ -8,7 +8,7 @@ module.exports = {
   themeColor: `#000`,
   backgroundColor: `#fff`,
   pathPrefix: null,
-  logo: path.resolve(__dirname, 'src/images/Logo.png'),
+  logo: path.resolve(__dirname, 'src/images/Logo.jpg'),
   social: {
     twitter: `gatsbyjs`,
     fbAppId: `966242223397117`,
