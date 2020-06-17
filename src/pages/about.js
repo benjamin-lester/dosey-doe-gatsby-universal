@@ -4,17 +4,21 @@ import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Box from 'components/box';
 import Head from 'components/head';
+import Img from 'gatsby-image';
 
 const About = ({ data }) => (
   <Layout>
     <Head pageTitle={data.aboutJson.title} />
-    <Box>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data.aboutJson.content.childMarkdownRemark.html,
-        }}
-      />
-    </Box>
+    <div className='rowC'>
+      <Img fluid={data.aboutJson.image.childImageSharp.fluid} alt={data.aboutJson.title} />
+      <Box>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.aboutJson.content.childMarkdownRemark.html,
+          }}
+        />
+      </Box>
+    </div>
   </Layout>
 );
 
@@ -31,6 +35,13 @@ export const query = graphql`
       content {
         childMarkdownRemark {
           html
+        }
+      }
+      image { 
+        childImageSharp {
+          fluid(maxHeight: 500, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
         }
       }
     }

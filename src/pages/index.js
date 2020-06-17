@@ -13,7 +13,11 @@ import { graphql } from 'gatsby';
 const Index = ({ data }) => (
   <Layout>
     <Box>
-      <Img fluid={data.homeJson.splash.image.childImageSharp.fluid} alt={data.homeJson.splash.title} />
+      <Img 
+        fluid={data.homeJson.splash.image.childImageSharp.fluid} 
+        alt={data.homeJson.splash.title} 
+        
+        />
       {/* <Img src={data.homeJson.splash.image} /> */}
       <Title as="h3" size="large">
         {data.homeJson.splash.text}
@@ -51,7 +55,7 @@ export const query = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxHeight: 500, quality: 90) {
+            fluid(maxWidth: 400, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

@@ -10,15 +10,18 @@ const Item = ({ title, copy, image, video }) => (
     <figcaption>
       <Title>{title}</Title>
       <Copy>{copy}</Copy>
-      <ReactPlayer url={video} />
+      <ReactPlayer 
+        url={video} 
+        controls
+        />
     </figcaption>
   </figure>
 );
 
 Item.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   copy: PropTypes.string,
-  image: PropTypes.object.isRequired,
+  image: PropTypes.object,
   video: PropTypes.string,
 };
 
