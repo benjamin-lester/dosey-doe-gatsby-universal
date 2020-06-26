@@ -8,8 +8,9 @@ services:
     container_name: dosey-doe-app
     restart: unless-stopped
     working_dir: /usr/share/nginx/html
+    ports: [4200]
     volumes:
-      - ./:/usr/share/nginx/html
+      - ./public:/usr/share/nginx/html
     networks:
       - doseydoe
 
