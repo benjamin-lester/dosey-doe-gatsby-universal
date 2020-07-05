@@ -31,8 +31,12 @@ const LayoutWithQuery = (props) => (
         homeJson {
           logo {
             childImageSharp {
-              fluid(maxHeight: 500, quality: 90) {
+              fluid(maxWidth:125, quality: 90) {
                 ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluidLimitPresentationSize
+              }
+              fixed(width: 125, height: 125) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

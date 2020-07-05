@@ -4,17 +4,24 @@ import Img from 'gatsby-image';
 import { Title } from './logo.css';
 
 const Logo = ({ title, logo }) => (
-  <figure>
-    <Img fluid={logo ? logo.childImageSharp.fluid : {}} alt={title} />
-    <figcaption>
-      <Title>{title}</Title>
-    </figcaption>
-  </figure>
+ 
+    <Img  fluid={logo.childImageSharp.fluid} 
+          alt={title} 
+          style={{width:'125px'}}
+          imgStyle={{
+            objectFit: "none",
+          }}
+          />
+
+  // <figcaption>
+  //     <Title>{title}</Title>
+  //   </figcaption>
+
 );
 
 Logo.propTypes = {
   title: PropTypes.string,
-  image: PropTypes.object.isRequired,
+  logo: PropTypes.object.isRequired
 };
 
 export default Logo;

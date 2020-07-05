@@ -5,20 +5,25 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Head from 'components/head';
 import Img from 'gatsby-image';
+import { SocialIcon } from 'react-social-icons';
 
 const About = ({ data }) => (
   <Layout>
     <Head pageTitle={data.aboutJson.title} />
-    <div className='rowC'>
+    <Box>
+      <div className='inlineRowColumn-halfsies'>
       <Img fluid={data.aboutJson.image.childImageSharp.fluid} alt={data.aboutJson.title} />
-      <Box>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.aboutJson.content.childMarkdownRemark.html,
-          }}
-        />
-      </Box>
-    </div>
+      </div>
+      <div className='inlineRowColumn-halfsies'>
+      <p 
+        dangerouslySetInnerHTML={{
+          __html: data.aboutJson.content.childMarkdownRemark.html,
+        }}
+      />
+      <SocialIcon url="mailto:doseydoefilms@gmail.com" />
+      <SocialIcon url="https://www.instagram.com/doseydoefilms" />
+      </div>
+    </Box>
   </Layout>
 );
 

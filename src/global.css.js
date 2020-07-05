@@ -84,9 +84,10 @@ export default createGlobalStyle`
     font-family: Nunito,"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
   }
 
-  .rowC {
-    display: flex;
-    flex-direction: row;
+  .inlineRowColumn-halfsies {
+    width:40%;
+    float:left;
+    margin:5%;
   }
 
   video {

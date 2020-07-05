@@ -9,10 +9,9 @@ const Nav = () => (
         <Link to="/about">About</Link>
       </li>
       <li>
-        <a href="/projects">Projects</a>
+        <Link to="/projects">Projects</Link>
       </li>
     </ul>
   </Container>
 );
-
 export default Nav;
