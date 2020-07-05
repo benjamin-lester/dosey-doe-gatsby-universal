@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dosey-doe
+    container_name: dosey-doe-app
+    restart: unless-stopped
+    working_dir: /usr/share/nginx/html
+    ports: [4200]
+    volumes:
+      - ./public:/usr/share/nginx/html
+    networks:
+      - doseydoe
+
+networks:
+  doseydoe:
+    driver: bridge
