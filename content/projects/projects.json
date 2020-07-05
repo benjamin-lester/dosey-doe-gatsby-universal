@@ -8,13 +8,15 @@
     {
         "title": "Floor Scrapers",
         "copy": "A group of seedy contractors rush to finish work on a dilapidated home, all while dealing with the repercussions of a serious workplace accident.",
-        "image": "../images/FloorScrapers.jpg",
-        "video": "https://vimeo.com/416429985"
+        "video": "https://vimeo.com/416429985",
+        "isTrailer": true
     },
     {
         "title": "Practically Tropical",
         "copy": "In the face of a minor crisis, five millennials and their handyman prove how incompetent they really are.",
-        "image": "../images/PracticallyTropical.jpg"
+        "image": "../images/PracticallyTropical.jpg",
+        "video": "https://vimeo.com/432649206",
+        "isTrailer": true
     },
     {
         "title": "Bowling with Krumpleman",

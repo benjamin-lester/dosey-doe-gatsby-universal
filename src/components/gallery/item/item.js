@@ -1,24 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { Title, Copy } from './item.css';
+import { Title, Copy, Trailer } from './item.css';
 import ReactPlayer from 'react-player';
 
-const Item = ({ title, copy, image, video }) => (
+const Item = ({ title, copy, image, video, isTrailer }) => (
   <figure>
-    {image ? (
-      <Img fixed={image ? image.childImageSharp.fixed : {}} alt={title} />
-    ) : (
-      <ReactPlayer 
-        url={video} 
-        controls
-        />
-    )}
     <figcaption>
       <Title>{title}</Title>
       <Copy>{copy}</Copy>
+      { isTrailer ? (
+        <Trailer>Watch the Trailer:</Trailer>
+        ) : (
+        ''
+      )}
       
     </figcaption>
+    {video ? (
+      <ReactPlayer 
+      url={video} 
+      controls
+      />
+    ) : (
+      <Img fixed={image ? image.childImageSharp.fixed : {}} alt={title} />
+    )}
+    
   </figure>
 );
 
@@ -27,6 +33,7 @@ Item.propTypes = {
   copy: PropTypes.string,
   image: PropTypes.object,
   video: PropTypes.string,
+  isTrailer: PropTypes.bool,
 };
 
 export default Item;

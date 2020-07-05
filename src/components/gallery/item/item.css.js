@@ -16,3 +16,13 @@ export const Copy = styled.p`
     margin-bottom: 4rem;
   `};
 `;
+export const Trailer = styled.p`
+  color: #757575;
+  margin: 0 2rem 2rem;
+  text-transform:capitalize;
+  font-variant:all-small-caps;  
+
+  ${MEDIA.TABLET`
+    margin-bottom: 4rem;
+  `};
+`;
