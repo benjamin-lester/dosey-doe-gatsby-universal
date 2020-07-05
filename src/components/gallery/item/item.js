@@ -6,14 +6,18 @@ import ReactPlayer from 'react-player';
 
 const Item = ({ title, copy, image, video }) => (
   <figure>
-    <Img fluid={image ? image.childImageSharp.fluid : {}} alt={title} />
-    <figcaption>
-      <Title>{title}</Title>
-      <Copy>{copy}</Copy>
+    {image ? (
+      <Img fixed={image ? image.childImageSharp.fixed : {}} alt={title} />
+    ) : (
       <ReactPlayer 
         url={video} 
         controls
         />
+    )}
+    <figcaption>
+      <Title>{title}</Title>
+      <Copy>{copy}</Copy>
+      
     </figcaption>
   </figure>
 );

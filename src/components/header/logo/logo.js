@@ -7,7 +7,7 @@ const Logo = ({ title, logo }) => (
  
     <Img  fluid={logo.childImageSharp.fluid} 
           alt={title} 
-          style={{width:'125px'}}
+          style={{width:'100px'}}
           imgStyle={{
             objectFit: "none",
           }}

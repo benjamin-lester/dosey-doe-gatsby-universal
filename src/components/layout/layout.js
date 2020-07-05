@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Head from 'components/head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
+import Footer from 'components/footer';
 
 const Layout = ({ data, children }) => (
   <div>
@@ -31,11 +32,11 @@ const LayoutWithQuery = (props) => (
         homeJson {
           logo {
             childImageSharp {
-              fluid(maxWidth:125, quality: 90) {
+              fluid(maxWidth:100, quality: 90) {
                 ...GatsbyImageSharpFluid_withWebp
                 ...GatsbyImageSharpFluidLimitPresentationSize
               }
-              fixed(width: 125, height: 125) {
+              fixed(width: 100, height: 100) {
                 ...GatsbyImageSharpFixed
               }
             }
